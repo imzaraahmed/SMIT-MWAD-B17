@@ -1,0 +1,16 @@
+.form-container{
+    width: 50%;
+    border-width:3px;
+    background-color: rgb(218, 204, 255, 0.9);
+    border-radius: 20px;
+
+}
+
+.btn{
+    width:100px;
+    height:50px;
+}
+body{
+    background-image:url("../images/bg-2.jpg");
+     background-size: cover;
+}
