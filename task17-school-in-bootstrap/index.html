@@ -9,44 +9,8 @@
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js" integrity="sha384-cVKIPhGWiC2Al4u+LWgxfKTRIcfu0JTxR+EQDz/bgldoEyl4H0zUF0QKbrJ0EcQF" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
 
-    <style>
-        .kps-light-bg {
-            /*  background-color: #f5efe0 !important; */
-
-            background-color: #ffffff !important;
-
-        }
-
-        .kps-hero-heading {
-            font-size: 50px;
-            font-weight: 900;
-        }
-
-        .kps-bnone {
-            border: none !important;
-        }
-
-        .kps-purple {
-            color: #811852 !important;
-        }
-        .kps-nav-link-active {
-            background-color: bisque;
-            border-radius: 50px;
-            padding: 10px 20px !important;
-        
-        }
-                .kps-nav-link {
-            background-color: rgb(232, 241, 234);
-            border-radius: 50px;
-            padding: 10px 20px !important;
-        
-        }
-
-        .kps-card-heading {
-            font-size: 40px;
-            font-weight: 800;
-        }
-    </style>
+    <link  rel="stylesheet" href="styles/styles.css" >
+    
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
 </head>
@@ -56,31 +20,29 @@
 
 <!-- Modal -->
 <!-- Button trigger modal -->
-<button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal">
-  Launch demo modal
-</button>
+
 
 <!-- Modal -->
 <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
   <div class="modal-dialog">
     <div class="modal-content">
       <div class="modal-header">
-        <h5 class="modal-title" id="exampleModalLabel">Modal title</h5>
+        <h5 class="modal-title" id="exampleModalLabel">Apply Now and Scan QR code</h5>
         <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
       </div>
-      <div class="modal-body">
-        ...
+      <div class="modal-body text-center ">
+          <h2 class="kps-hero-heading px-5 text-center">
+                        Scan QR code <span class="kps-purple">Get 40% DISCOUNT </span>
+                    </h2>
+                    <img src="images/reg-qrcode.png" class="mx-auto my-5" alt="..."width="200">
       </div>
-      <div class="modal-footer">
-        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-        <button type="button" class="btn btn-primary">Save changes</button>
-      </div>
+
     </div>
   </div>
 </div>
     <nav class="navbar navbar-expand-lg navbar-light  ">
         <div class="container-fluid">
-            <a class="navbar-brand" href="#">
+            <a class="navbar-brand" href="index.html">
                 <img src="images/logo.png" alt="">
             </a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
@@ -88,6 +50,7 @@
                 aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
             </button>
+            <!--Navigation links-->
             <div class="collapse navbar-collapse d-flex justify-content-end pt-3" id="navbarSupportedContent">
                 <ul class="navbar-nav  mb-2 mb-lg-0" style="margin-right: 50px;">
                     <li class="nav-item me-4   ">
@@ -97,20 +60,23 @@
                         <a class="nav-link text-uppercase kps-purple kps-nav-link" href="about-us.html">About Us</a>
                     </li>
                     <li class="nav-item me-4  ">
-                        <a class="nav-link text-uppercase kps-purple kps-nav-link" href="#">Admissions</a>
+                        <a class="nav-link text-uppercase kps-purple kps-nav-link" href="academics.html">Academics</a>
                     </li>
                     <li class="nav-item me-4 kps ">
-                        <a class="nav-link text-uppercase kps-purple kps-nav-link" href="#" >
+                        <a class="nav-link text-uppercase kps-purple kps-nav-link" href="campuses.html" >
                             Campuses
                         </a>
                         
                     </li>
+                    <li class="nav-item me-4  ">
+                        <a class="nav-link text-uppercase kps-purple kps-nav-link" href="contact-us.html">Contact us</a>
+                    </li>
+                    <li class="nav-item me-4  ">
+                        <a class="nav-link text-uppercase  kps-nav-link-green" href="registered-online.html">Apply online</a>
+                    </li>
         
                 </ul>
-                <form class="d-flex">
-                    <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
-                    <button class="btn btn-outline-success" type="submit">Search</button>
-                </form>
+                
             </div>
         </div>
     </nav>
@@ -119,8 +85,8 @@
         <div class="row">
             <div class="col-md-6 d-flex align-items-center ps-5">
                 <div class="">
-                    <h1 class="kps-hero-heading"> The right guidance can
-                        change your <span class="kps-purple">child’s destiny</span>
+                    <h1 class="kps-hero-heading"> 2025 Admissions open
+                        Apply Online <span class="kps-purple">Get 40% DISCOUNT </span>
                     </h1>
                     <p class="my-5">Our goal is to foster a love of learning that will be the basis for a lifetime of
                         growth,
@@ -128,8 +94,10 @@
                         We view parents as vital partners in this journey ahead. With commitment and enthusiasm we
                         continue to stride
                         confidently in the field of education.</p>
-                    <button type="button" class="btn btn-primary btn-lg">Register My Child Now</button>
-
+                        <button type="button" class="btn btn-primary btn-lg" data-bs-toggle="modal" data-bs-target="#exampleModal">
+  APPLY NOW AND GET 40% OFF
+</button>
+                    
                 </div>
             </div>
 

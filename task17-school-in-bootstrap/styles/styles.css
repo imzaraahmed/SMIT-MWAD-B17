@@ -1,0 +1,48 @@
+
+        .kps-light-bg {
+            /*  background-color: #f5efe0 !important; */
+
+            background-color: #ffffff !important;
+
+        }
+
+        .kps-hero-heading {
+            font-size: 50px;
+            font-weight: 900;
+        }
+
+        .kps-bnone {
+            border: none !important;
+        }
+
+        .kps-purple {
+            color: #811852 !important;
+        }
+        .kps-green{
+            color: #1c822d !important;
+        }
+        .kps-nav-link-active {
+            background-color: bisque;
+            border-radius: 50px;
+            padding: 10px 20px !important;
+        
+        }
+                .kps-nav-link {
+            background-color: rgb(232, 241, 234);
+            border-radius: 50px;
+            padding: 10px 20px !important;
+        
+        }
+
+       .kps-nav-link-green {
+            background-color: rgb(26, 169, 57);
+            border-radius: 50px;
+            padding: 10px 20px !important;
+            color: #ffffff !important;
+        
+        }
+
+        .kps-card-heading {
+            font-size: 40px;
+            font-weight: 800;
+        }
