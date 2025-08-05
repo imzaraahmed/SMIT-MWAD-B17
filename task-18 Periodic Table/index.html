@@ -1,166 +1,262 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <style>
-        body { font-family: Verdana, Geneva, Tahoma, sans-serif; background-color: #202e38    ;}
-        .row { display: flex; justify-content: space-around;  width: 100%; }
-        .elementBox { width: 5.4%; }
-        .element { border: solid 4px; margin: 0px; padding: 2px; transition: transform .2s;}
-        .elementNum { font-size:.8vw ;}
-        .elementAlphabet { font-size:3vw ; line-height: 80%;}
-        .elementName { font-size:.9vw ;}
-        .elementFullNum { font-size:.8vw ;}
+        body {
+            font-family: Verdana, Geneva, Tahoma, sans-serif;
+            background-color: #202e38;
+            padding: 1vw;
+        }
 
+        .row {
+            display: flex;
+            justify-content: space-around;
+            width: 100%;
+            margin-bottom: 2px;
+        }
 
-        .element:hover {transform: scale(1.5); background-color: aqua;}
+        .elementBox {
+            width: 5.4%;
+        }
 
+        .element {
+            border: solid .2vw;
+            margin: .1vw;
+            padding: .3vw;
+            transition: transform .2s;
+        }
 
+        
+        /* yellow color */
+
+        .yellow {
+
+            border-image: linear-gradient(to right, rgb(223, 223, 0), rgb(203, 217, 1)) 1;
+
+        }
+
+        .yellow div {
+           color: rgb(255, 242, 0);
+        }
+        
+        .yellow:hover {
+
+            background-color: rgb(255, 242, 0);
+
+        }
+
+        .yellow:hover div {
+
+            color: #202e38;
+
+        }
+
+        /* light purple color */
+
+        .lightPurple {
+
+            border-image: linear-gradient(to right, rgb(177, 73, 177),rgb(146, 51, 136)) 1;
+
+        }
+
+        .lightPurple div {
+           color: rgb(203, 47, 255);
+        }
+        
+        .lightPurple:hover {
+
+            background-color: rgb(219, 3, 215);
+
+        }
+
+        .lightPurple:hover div {
+
+            color: #202e38;
+
+        }
+
+        /* light blue color */
+
+        .lightblue {
+
+            border-image: linear-gradient(to right, rgb(185, 211, 214), rgb(135, 165, 164)) 1;
+
+        }
+
+        .lightblue div {
+           color: rgb(200, 255, 246);
+        }
+        
+        .lightblue:hover {
+
+            background-color: rgb(215, 255, 250);
+
+        }
+
+        .lightblue:hover div {
+
+            color: #202e38;
+
+        }
+        /* brown color */
+
+        .brown {
+
+            border-image: linear-gradient(to right, rgb(223, 130, 0), rgb(217, 123, 1)) 1;
+
+        }
+
+        .brown div {
+           color: rgb(255, 128, 0);
+        }
+        
+        .brown:hover {
+
+            background-color: rgb(255, 128, 0);
+
+        }
+
+        .brown:hover div {
+
+            color: #202e38;
+
+        }
+
+        /* pink color */
+
+        .pink {
+
+            border-image: linear-gradient(to right, rgb(223, 0, 156), rgb(217, 1, 159)) 1;
+
+        }
+
+        .pink div {
+           color: rgb(255, 0, 179);
+        }
+        
+        .pink:hover {
+
+            background-color: rgb(255, 0, 179);
+
+        }
+
+        .pink:hover div {
+
+            color: #202e38;
+
+        }
+
+        /* blue color */
+
+        .blue {
+
+            border-image: linear-gradient(to right, rgb(0, 223, 223), rgb(1, 217, 217)) 1;
+
+        }
+
+        .blue div {
+           color: aqua;
+        }
+        
+        .blue:hover {
+
+            background-color: aqua;
+
+        }
+
+        .blue:hover div {
+
+            color: #202e38;
+
+        }
+
+        /* green color */
+
+        
+        .green {
+
+            border-image: linear-gradient(to right, rgb(1, 225, 64), rgb(16, 174, 1)) 1;
+
+        }
+
+        .green div {
+           color: rgb(0, 255, 72);
+        }
+        
+        .green:hover {
+
+            background-color: rgb(0, 255, 72);
+
+        }
+
+        .green:hover div {
+
+            color: #202e38;
+
+        }
+
+        .element:hover {
+            transform: scale(1.5);
+            
+
+        }
+
+        .elementNum {
+            font-size: .7vw;
+            
+        }
+
+        .elementAlphabet {
+            font-size: 2vw;
+            line-height: 90%;
+            
+        }
+
+        .elementName {
+            font-size: .7vw;
+            
+        }
+
+        .elementFullNum {
+            font-size: .6vw;
+            
+        }
+
+        
+
+        .elementEmpty {
+            border: solid 0px;
+            margin: 0px;
+            padding: 2px;
+            transition: transform .2s;
+        }
+        .lastRowGap {
+            margin-top: 50px;
+        }
+        .heading {
+
+            color: white; text-align: center; font-weight: 500; font-size: 5vw; padding: 0px; margin: 0px;
+        }
+
+        .myinfor {
+
+            color: white; text-align: center; font-weight: 500; font-size: 1.5vw; padding: 0px; margin: 0px;
+        }
     </style>
-</head>
+
 <body>
 
+    <h1 class="heading">Periodic Table</h1>
+    <h2 class="myinfor">Zara Ahmad - 414562</h2>
+
     <div class="row">
+
         <div class="elementBox">
-            <div class="element">
-                <div class="elementNum">1</div>
-                <div class="elementAlphabet">H</div>
-                <div class="elementName">Hydrogen</div>
-                <div class="elementFullNum">1.008</div>
-            </div>
-        </div>
-        <div class="elementBox">
-            <div class="element">
-                <div class="elementNum">1</div>
-                <div class="elementAlphabet">H</div>
-                <div class="elementName">Hydrogen</div>
-                <div class="elementFullNum">1.008</div>
-            </div>
-        </div>
-        <div class="elementBox">
-            <div class="element">
-                <div class="elementNum">1</div>
-                <div class="elementAlphabet">H</div>
-                <div class="elementName">Hydrogen</div>
-                <div class="elementFullNum">1.008</div>
-            </div>
-        </div>
-        <div class="elementBox">
-            <div class="element">
-                <div class="elementNum">1</div>
-                <div class="elementAlphabet">H</div>
-                <div class="elementName">Hydrogen</div>
-                <div class="elementFullNum">1.008</div>
-            </div>
-        </div>
-        <div class="elementBox">
-            <div class="element">
-                <div class="elementNum">1</div>
-                <div class="elementAlphabet">H</div>
-                <div class="elementName">Hydrogen</div>
-                <div class="elementFullNum">1.008</div>
-            </div>
-        </div>
-        <div class="elementBox">
-            <div class="element">
-                <div class="elementNum">1</div>
-                <div class="elementAlphabet">H</div>
-                <div class="elementName">Hydrogen</div>
-                <div class="elementFullNum">1.008</div>
-            </div>
-        </div>
-        <div class="elementBox">
-            <div class="element">
-                <div class="elementNum">1</div>
-                <div class="elementAlphabet">H</div>
-                <div class="elementName">Hydrogen</div>
-                <div class="elementFullNum">1.008</div>
-            </div>
-        </div>
-        <div class="elementBox">
-            <div class="element">
-                <div class="elementNum">1</div>
-                <div class="elementAlphabet">H</div>
-                <div class="elementName">Hydrogen</div>
-                <div class="elementFullNum">1.008</div>
-            </div>
-        </div>
-        <div class="elementBox">
-            <div class="element">
-                <div class="elementNum">1</div>
-                <div class="elementAlphabet">H</div>
-                <div class="elementName">Hydrogen</div>
-                <div class="elementFullNum">1.008</div>
-            </div>
-        </div>
-        <div class="elementBox">
-            <div class="element">
-                <div class="elementNum">1</div>
-                <div class="elementAlphabet">H</div>
-                <div class="elementName">Hydrogen</div>
-                <div class="elementFullNum">1.008</div>
-            </div>
-        </div>
-        <div class="elementBox">
-            <div class="element">
-                <div class="elementNum">1</div>
-                <div class="elementAlphabet">H</div>
-                <div class="elementName">Hydrogen</div>
-                <div class="elementFullNum">1.008</div>
-            </div>
-        </div>
-        <div class="elementBox">
-            <div class="element">
-                <div class="elementNum">1</div>
-                <div class="elementAlphabet">H</div>
-                <div class="elementName">Hydrogen</div>
-                <div class="elementFullNum">1.008</div>
-            </div>
-        </div>
-        <div class="elementBox">
-            <div class="element">
-                <div class="elementNum">1</div>
-                <div class="elementAlphabet">H</div>
-                <div class="elementName">Hydrogen</div>
-                <div class="elementFullNum">1.008</div>
-            </div>
-        </div>
-        <div class="elementBox">
-            <div class="element">
-                <div class="elementNum">1</div>
-                <div class="elementAlphabet">H</div>
-                <div class="elementName">Hydrogen</div>
-                <div class="elementFullNum">1.008</div>
-            </div>
-        </div>
-        <div class="elementBox">
-            <div class="element">
-                <div class="elementNum">1</div>
-                <div class="elementAlphabet">H</div>
-                <div class="elementName">Hydrogen</div>
-                <div class="elementFullNum">1.008</div>
-            </div>
-        </div>
-        <div class="elementBox">
-            <div class="element">
-                <div class="elementNum">1</div>
-                <div class="elementAlphabet">H</div>
-                <div class="elementName">Hydrogen</div>
-                <div class="elementFullNum">1.008</div>
-            </div>
-        </div>
-        <div class="elementBox">
-            <div class="element">
-                <div class="elementNum">1</div>
-                <div class="elementAlphabet">H</div>
-                <div class="elementName">Hydrogen</div>
-                <div class="elementFullNum">1.008</div>
-            </div>
-        </div>
-        <div class="elementBox">
-            <div class="element">
+            <div class="element pink">
                 <div class="elementNum">1</div>
                 <div class="elementAlphabet">H</div>
                 <div class="elementName">Hydrogen</div>
@@ -168,9 +264,1148 @@
             </div>
         </div>
 
+        <div class="elementBox">
+            <div class="elementEmpty">
+            </div>
+        </div>
+                <div class="elementBox">
+            <div class="elementEmpty">
+            </div>
+        </div>
+                <div class="elementBox">
+            <div class="elementEmpty">
+            </div>
+        </div>
+                <div class="elementBox">
+            <div class="elementEmpty">
+            </div>
+        </div>
+                <div class="elementBox">
+            <div class="elementEmpty">
+            </div>
+        </div>
+                <div class="elementBox">
+            <div class="elementEmpty">
+            </div>
+        </div>
+                <div class="elementBox">
+            <div class="elementEmpty">
+            </div>
+        </div>
+        <div class="elementBox">
+            <div class="elementEmpty">
+            </div>
+        </div>
+                <div class="elementBox">
+            <div class="elementEmpty">
+            </div>
+        </div>
+                <div class="elementBox">
+            <div class="elementEmpty">
+            </div>
+        </div>
+                <div class="elementBox">
+            <div class="elementEmpty">
+            </div>
+        </div>
+                <div class="elementBox">
+            <div class="elementEmpty">
+            </div>
+        </div>
+                <div class="elementBox">
+            <div class="elementEmpty">
+            </div>
+        </div>
+                <div class="elementBox">
+            <div class="elementEmpty">
+            </div>
+        </div>
+                <div class="elementBox">
+            <div class="elementEmpty">
+            </div>
+        </div>
+                <div class="elementBox">
+            <div class="elementEmpty">
+            </div>
+        </div>
+
         
-        
+        <div class="elementBox">
+            <div class="element lightPurple">
+                <div class="elementNum">2</div>
+                <div class="elementAlphabet">He</div>
+                <div class="elementName">Helium</div>
+                <div class="elementFullNum">4.0026</div>
+            </div>
+        </div>
     </div>
-    
+    <div class="row">
+
+        <div class="elementBox">
+            <div class="element brown">
+                <div class="elementNum">3</div>
+                <div class="elementAlphabet">Li</div>
+                <div class="elementName">Lithium</div>
+                <div class="elementFullNum">6.94</div>
+            </div>
+        </div>
+        <div class="elementBox">
+            <div class="element yellow">
+                <div class="elementNum">4</div>
+                <div class="elementAlphabet">Be</div>
+                <div class="elementName">Beryllium</div>
+                <div class="elementFullNum">9.0122</div>
+            </div>
+        </div>
+        <div class="elementBox">
+            <div class="elementEmpty">
+            </div>
+        </div>
+                <div class="elementBox">
+            <div class="elementEmpty">
+            </div>
+        </div>
+                <div class="elementBox">
+            <div class="elementEmpty">
+            </div>
+        </div>
+                <div class="elementBox">
+            <div class="elementEmpty">
+            </div>
+        </div>
+                <div class="elementBox">
+            <div class="elementEmpty">
+            </div>
+        </div>
+                <div class="elementBox">
+            <div class="elementEmpty">
+            </div>
+        </div>
+                <div class="elementBox">
+            <div class="elementEmpty">
+            </div>
+        </div>
+                <div class="elementBox">
+            <div class="elementEmpty">
+            </div>
+        </div>
+                <div class="elementBox">
+            <div class="elementEmpty">
+            </div>
+        </div>
+                <div class="elementBox">
+            <div class="elementEmpty">
+            </div>
+        </div>
+        <div class="elementBox">
+            <div class="element lightPurple">
+                <div class="elementNum">5</div>
+                <div class="elementAlphabet">B</div>
+                <div class="elementName">Boron</div>
+                <div class="elementFullNum">10.81</div>
+            </div>
+        </div>
+        <div class="elementBox">
+            <div class="element pink">
+                <div class="elementNum">6</div>
+                <div class="elementAlphabet">C</div>
+                <div class="elementName">Carbon</div>
+                <div class="elementFullNum">12.011</div>
+            </div>
+        </div>
+        <div class="elementBox">
+            <div class="element pink">
+                <div class="elementNum">7</div>
+                <div class="elementAlphabet">N</div>
+                <div class="elementName">Nitrogen</div>
+                <div class="elementFullNum">14.007</div>
+            </div>
+        </div>
+        <div class="elementBox">
+            <div class="element pink">
+                <div class="elementNum">8</div>
+                <div class="elementAlphabet">O</div>
+                <div class="elementName">Oxygen</div>
+                <div class="elementFullNum">15.999</div>
+            </div>
+        </div>
+        <div class="elementBox">
+            <div class="element brown">
+                <div class="elementNum">9</div>
+                <div class="elementAlphabet">F</div>
+                <div class="elementName">Fluorine</div>
+                <div class="elementFullNum">18.998</div>
+            </div>
+        </div>
+        <div class="elementBox">
+            <div class="element lightPurple">
+                <div class="elementNum">10</div>
+                <div class="elementAlphabet">Ne</div>
+                <div class="elementName">Neon</div>
+                <div class="elementFullNum">20.180</div>
+            </div>
+        </div>
+    </div>
+    <div class="row">
+
+        <div class="elementBox">
+            <div class="element brown">
+                <div class="elementNum">11</div>
+                <div class="elementAlphabet">Na</div>
+                <div class="elementName">Sodium</div>
+                <div class="elementFullNum">22.990</div>
+            </div>
+        </div>
+        <div class="elementBox">
+            <div class="element yellow">
+                <div class="elementNum">12</div>
+                <div class="elementAlphabet">Mg</div>
+                <div class="elementName">Magnesium</div>
+                <div class="elementFullNum">24.305</div>
+            </div>
+        </div>
+
+                <div class="elementBox">
+            <div class="elementEmpty">
+            </div>
+        </div>
+                <div class="elementBox">
+            <div class="elementEmpty">
+            </div>
+        </div>
+                <div class="elementBox">
+            <div class="elementEmpty">
+            </div>
+        </div>
+                <div class="elementBox">
+            <div class="elementEmpty">
+            </div>
+        </div>
+                <div class="elementBox">
+            <div class="elementEmpty">
+            </div>
+        </div>
+                <div class="elementBox">
+            <div class="elementEmpty">
+            </div>
+        </div>
+                <div class="elementBox">
+            <div class="elementEmpty">
+            </div>
+        </div>
+                <div class="elementBox">
+            <div class="elementEmpty">
+            </div>
+        </div>
+                <div class="elementBox">
+            <div class="elementEmpty">
+            </div>
+        </div>
+                <div class="elementBox">
+            <div class="elementEmpty">
+            </div>
+        </div>
+
+        <div class="elementBox">
+            <div class="element lightblue">
+                <div class="elementNum">13</div>
+                <div class="elementAlphabet">Al</div>
+                <div class="elementName">Aluminium</div>
+                <div class="elementFullNum">26.982</div>
+            </div>
+        </div>
+        <div class="elementBox">
+            <div class="element lightPurple">
+                <div class="elementNum">14</div>
+                <div class="elementAlphabet">Si</div>
+                <div class="elementName">Silicon</div>
+                <div class="elementFullNum">28.085</div>
+            </div>
+        </div>
+        <div class="elementBox">
+            <div class="element pink">
+                <div class="elementNum">15</div>
+                <div class="elementAlphabet">P</div>
+                <div class="elementName">Phosphorus</div>
+                <div class="elementFullNum">30.974</div>
+            </div>
+        </div>
+        <div class="elementBox">
+            <div class="element pink">
+                <div class="elementNum">16</div>
+                <div class="elementAlphabet">S</div>
+                <div class="elementName">Sulfur</div>
+                <div class="elementFullNum">32.06</div>
+            </div>
+        </div>
+        <div class="elementBox">
+            <div class="element brown">
+                <div class="elementNum">17</div>
+                <div class="elementAlphabet">Cl</div>
+                <div class="elementName">Chlorine</div>
+                <div class="elementFullNum">35.45</div>
+            </div>
+        </div>
+        <div class="elementBox">
+            <div class="element lightPurple" >
+                <div class="elementNum">18</div>
+                <div class="elementAlphabet">Ar</div>
+                <div class="elementName">Argon</div>
+                <div class="elementFullNum">39.948</div>
+            </div>
+        </div>
+    </div>
+    <div class="row">
+
+        <div class="elementBox">
+            <div class="element brown">
+                <div class="elementNum">19</div>
+                <div class="elementAlphabet">K</div>
+                <div class="elementName">Potassium</div>
+                <div class="elementFullNum">39.098</div>
+            </div>
+        </div>
+        <div class="elementBox">
+            <div class="element yellow">
+                <div class="elementNum">20</div>
+                <div class="elementAlphabet">Ca</div>
+                <div class="elementName">Calcium</div>
+                <div class="elementFullNum">40.078</div>
+            </div>
+        </div>
+        <div class="elementBox">
+            <div class="element blue">  
+                <div class="elementNum">21</div>
+                <div class="elementAlphabet">Sc</div>
+                <div class="elementName">Scandium</div>
+                <div class="elementFullNum">44.956</div>
+            </div>
+        </div>
+        <div class="elementBox">
+            <div class="element blue">
+                <div class="elementNum">22</div>
+                <div class="elementAlphabet">Ti</div>
+                <div class="elementName">Titanium</div>
+                <div class="elementFullNum">47.867</div>
+            </div>
+        </div>
+        <div class="elementBox">
+            <div class="element blue">
+                <div class="elementNum">23</div>
+                <div class="elementAlphabet">V</div>
+                <div class="elementName">Vanadium</div>
+                <div class="elementFullNum">50.942</div>
+            </div>
+        </div>
+        <div class="elementBox">
+            <div class="element blue">
+                <div class="elementNum">24</div>
+                <div class="elementAlphabet">Cr</div>
+                <div class="elementName">Chromium</div>
+                <div class="elementFullNum">51.996</div>
+            </div>
+        </div>
+        <div class="elementBox">
+            <div class="element blue">
+                <div class="elementNum">25</div>
+                <div class="elementAlphabet">Mn</div>
+                <div class="elementName">Manganese</div>
+                <div class="elementFullNum">54.938</div>
+            </div>
+        </div>
+        <div class="elementBox">
+            <div class="element blue">
+                <div class="elementNum">26</div>
+                <div class="elementAlphabet">Fe</div>
+                <div class="elementName">Iron</div>
+                <div class="elementFullNum">55.845</div>
+            </div>
+        </div>
+        <div class="elementBox">
+            <div class="element blue">
+                <div class="elementNum">27</div>
+                <div class="elementAlphabet">Co</div>
+                <div class="elementName">Cobalt</div>
+                <div class="elementFullNum">58.933</div>
+            </div>
+        </div>
+        <div class="elementBox">
+            <div class="element blue">
+                <div class="elementNum">28</div>
+                <div class="elementAlphabet">Ni</div>
+                <div class="elementName">Nickel</div>
+                <div class="elementFullNum">58.693</div>
+            </div>
+        </div>
+        <div class="elementBox">
+            <div class="element blue">
+                <div class="elementNum">29</div>
+                <div class="elementAlphabet">Cu</div>
+                <div class="elementName">Copper</div>
+                <div class="elementFullNum">63.546</div>
+            </div>
+        </div>
+        <div class="elementBox">
+            <div class="element blue">
+                <div class="elementNum">30</div>
+                <div class="elementAlphabet">Zn</div>
+                <div class="elementName">Zinc</div>
+                <div class="elementFullNum">65.38</div>
+            </div>
+        </div>
+        <div class="elementBox">
+            <div class="element lightblue">
+                <div class="elementNum">31</div>
+                <div class="elementAlphabet">Ga</div>
+                <div class="elementName">Gallium</div>
+                <div class="elementFullNum">69.723</div>
+            </div>
+        </div>
+        <div class="elementBox">
+            <div class="element lightPurple">
+                <div class="elementNum">32</div>
+                <div class="elementAlphabet">Ge</div>
+                <div class="elementName">Germanium</div>
+                <div class="elementFullNum">72.63</div>
+            </div>
+        </div>
+        <div class="elementBox">
+            <div class="element lightPurple">
+                <div class="elementNum">33</div>
+                <div class="elementAlphabet">As</div>
+                <div class="elementName">Arsenic</div>
+                <div class="elementFullNum">74.922</div>
+            </div>
+        </div>
+        <div class="elementBox">
+            <div class="element pink">
+                <div class="elementNum">34</div>
+                <div class="elementAlphabet">Se</div>
+                <div class="elementName">Selenium</div>
+                <div class="elementFullNum">78.971</div>
+            </div>
+        </div>
+        <div class="elementBox">
+            <div class="element brown">
+                <div class="elementNum">35</div>
+                <div class="elementAlphabet">Br</div>
+                <div class="elementName">Bromine</div>
+                <div class="elementFullNum">79.904</div>
+            </div>
+        </div>
+        <div class="elementBox">
+            <div class="element lightPurple">
+                <div class="elementNum">36</div>
+                <div class="elementAlphabet">Kr</div>
+                <div class="elementName">Krypton</div>
+                <div class="elementFullNum">83.798</div>
+            </div>
+        </div>
+    </div>
+    <div class="row">
+
+        <div class="elementBox">
+            <div class="element brown">
+                <div class="elementNum">37</div>
+                <div class="elementAlphabet">Rb</div>
+                <div class="elementName">Rubidium</div>
+                <div class="elementFullNum">85.468</div>
+            </div>
+        </div>
+        <div class="elementBox">
+            <div class="element yellow">
+                <div class="elementNum">38</div>
+                <div class="elementAlphabet">Sr</div>
+                <div class="elementName">Strontium</div>
+                <div class="elementFullNum">87.62</div>
+            </div>
+        </div>
+        <div class="elementBox">
+            <div class="element blue">
+                <div class="elementNum">39</div>
+                <div class="elementAlphabet">Y</div>
+                <div class="elementName">Yttrium</div>
+                <div class="elementFullNum">88.906</div>
+            </div>
+        </div>
+        <div class="elementBox">
+            <div class="element blue">
+                <div class="elementNum">40</div>
+                <div class="elementAlphabet">Zr</div>
+                <div class="elementName">Zirconium</div>
+                <div class="elementFullNum">91.224</div>
+            </div>
+        </div>
+        <div class="elementBox">
+            <div class="element blue">
+                <div class="elementNum">41</div>
+                <div class="elementAlphabet">Nb</div>
+                <div class="elementName">Niobium</div>
+                <div class="elementFullNum">92.906</div>
+            </div>
+        </div>
+        <div class="elementBox">
+            <div class="element blue">
+                <div class="elementNum">42</div>
+                <div class="elementAlphabet">Mo</div>
+                <div class="elementName">Molybdenum</div>
+                <div class="elementFullNum">95.95</div>
+            </div>
+        </div>
+        <div class="elementBox">
+            <div class="element blue">
+                <div class="elementNum">43</div>
+                <div class="elementAlphabet">Tc</div>
+                <div class="elementName">Technetium</div>
+                <div class="elementFullNum">[98]</div>
+            </div>
+        </div>
+        <div class="elementBox">
+            <div class="element blue">
+                <div class="elementNum">44</div>
+                <div class="elementAlphabet">Ru</div>
+                <div class="elementName">Ruthenium</div>
+                <div class="elementFullNum">101.07</div>
+            </div>
+        </div>
+        <div class="elementBox">
+            <div class="element blue">
+                <div class="elementNum">45</div>
+                <div class="elementAlphabet">Rh</div>
+                <div class="elementName">Rhodium</div>
+                <div class="elementFullNum">102.91</div>
+            </div>
+        </div>
+        <div class="elementBox">
+            <div class="element blue">
+                <div class="elementNum">46</div>
+                <div class="elementAlphabet">Pd</div>
+                <div class="elementName">Palladium</div>
+                <div class="elementFullNum">106.42</div>
+            </div>
+        </div>
+        <div class="elementBox">
+            <div class="element blue">
+                <div class="elementNum">47</div>
+                <div class="elementAlphabet">Ag</div>
+                <div class="elementName">Silver</div>
+                <div class="elementFullNum">107.87</div>
+            </div>
+        </div>
+        <div class="elementBox">
+            <div class="element blue">
+                <div class="elementNum">48</div>
+                <div class="elementAlphabet">Cd</div>
+                <div class="elementName">Cadmium</div>
+                <div class="elementFullNum">112.41</div>
+            </div>
+        </div>
+        <div class="elementBox">
+            <div class="element lightblue">
+                <div class="elementNum">49</div>
+                <div class="elementAlphabet">In</div>
+                <div class="elementName">Indium</div>
+                <div class="elementFullNum">114.82</div>
+            </div>
+        </div>
+        <div class="elementBox">
+            <div class="element lightblue"> 
+                <div class="elementNum">50</div>
+                <div class="elementAlphabet">Sn</div>
+                <div class="elementName">Tin</div>
+                <div class="elementFullNum">118.71</div>
+            </div>
+        </div>
+        <div class="elementBox">
+            <div class="element lightPurple">
+                <div class="elementNum">51</div>
+                <div class="elementAlphabet">Sb</div>
+                <div class="elementName">Antimony</div>
+                <div class="elementFullNum">121.76</div>
+            </div>
+        </div>
+        <div class="elementBox">
+            <div class="element lightPurple">
+                <div class="elementNum">52</div>
+                <div class="elementAlphabet">Te</div>
+                <div class="elementName">Tellurium</div>
+                <div class="elementFullNum">127.60</div>
+            </div>
+        </div>
+        <div class="elementBox">
+            <div class="element brown">
+                <div class="elementNum">53</div>
+                <div class="elementAlphabet">I</div>
+                <div class="elementName">Iodine</div>
+                <div class="elementFullNum">126.90</div>
+            </div>
+        </div>
+        <div class="elementBox">
+            <div class="element lightPurple">
+                <div class="elementNum">54</div>
+                <div class="elementAlphabet">Xe</div>
+                <div class="elementName">Xenon</div>
+                <div class="elementFullNum">131.29</div>
+            </div>
+        </div>
+    </div>
+    <div class="row">
+
+        <div class="elementBox">
+            <div class="element brown">
+                <div class="elementNum">55</div>
+                <div class="elementAlphabet">Cs</div>
+                <div class="elementName">Caesium</div>
+                <div class="elementFullNum">132.91</div>
+            </div>
+        </div>
+        <div class="elementBox">
+            <div class="element yellow">
+                <div class="elementNum">56</div>
+                <div class="elementAlphabet">Ba</div>
+                <div class="elementName">Barium</div>
+                <div class="elementFullNum">137.33</div>
+            </div>
+        </div>
+        <div class="elementBox">
+            <div class="element green">
+                <div class="elementNum">57</div>
+                <div class="elementAlphabet">La</div>
+                <div class="elementName">Lanthanum</div>
+                <div class="elementFullNum">138.91</div>
+            </div>
+        </div>
+        <div class="elementBox">
+            <div class="element blue">
+                <div class="elementNum">72</div>
+                <div class="elementAlphabet">Hf</div>
+                <div class="elementName">Hafnium</div>
+                <div class="elementFullNum">178.49</div>
+            </div>
+        </div>
+        <div class="elementBox">
+            <div class="element blue">
+                <div class="elementNum">73</div>
+                <div class="elementAlphabet">Ta</div>
+                <div class="elementName">Tantalum</div>
+                <div class="elementFullNum">180.95</div>
+            </div>
+        </div>
+        <div class="elementBox">
+            <div class="element blue">
+                <div class="elementNum">74</div>
+                <div class="elementAlphabet">W</div>
+                <div class="elementName">Tungsten</div>
+                <div class="elementFullNum">183.84</div>
+            </div>
+        </div>
+        <div class="elementBox">
+            <div class="element blue">
+                <div class="elementNum">75</div>
+                <div class="elementAlphabet">Re</div>
+                <div class="elementName">Rhenium</div>
+                <div class="elementFullNum">186.21</div>
+            </div>
+        </div>
+        <div class="elementBox">
+            <div class="element blue">
+                <div class="elementNum">76</div>
+                <div class="elementAlphabet">Os</div>
+                <div class="elementName">Osmium</div>
+                <div class="elementFullNum">190.23</div>
+            </div>
+        </div>
+        <div class="elementBox">
+            <div class="element blue">
+                <div class="elementNum">77</div>
+                <div class="elementAlphabet">Ir</div>
+                <div class="elementName">Iridium</div>
+                <div class="elementFullNum">192.22</div>
+            </div>
+        </div>
+        <div class="elementBox">
+            <div class="element blue">
+                <div class="elementNum">78</div>
+                <div class="elementAlphabet">Pt</div>
+                <div class="elementName">Platinum</div>
+                <div class="elementFullNum">195.08</div>
+            </div>
+        </div>
+        <div class="elementBox">
+            <div class="element blue">
+                <div class="elementNum">79</div>
+                <div class="elementAlphabet">Au</div>
+                <div class="elementName">Gold</div>
+                <div class="elementFullNum">196.97</div>
+            </div>
+        </div>
+        <div class="elementBox">
+            <div class="element blue">
+                <div class="elementNum">80</div>
+                <div class="elementAlphabet">Hg</div>
+                <div class="elementName">Mercury</div>
+                <div class="elementFullNum">200.59</div>
+            </div>
+        </div>
+        <div class="elementBox">
+            <div class="element lightblue">
+                <div class="elementNum">81</div>
+                <div class="elementAlphabet">Tl</div>
+                <div class="elementName">Thallium</div>
+                <div class="elementFullNum">204.38</div>
+            </div>
+        </div>
+        <div class="elementBox">
+            <div class="element lightblue">
+                <div class="elementNum">82</div>
+                <div class="elementAlphabet">Pb</div>
+                <div class="elementName">Lead</div>
+                <div class="elementFullNum">207.2</div>
+            </div>
+        </div>
+        <div class="elementBox">
+            <div class="element lightblue">
+                <div class="elementNum">83</div>
+                <div class="elementAlphabet">Bi</div>
+                <div class="elementName">Bismuth</div>
+                <div class="elementFullNum">208.98</div>
+            </div>
+        </div>
+        <div class="elementBox">
+            <div class="element lightPurple">
+                <div class="elementNum">84</div>
+                <div class="elementAlphabet">Po</div>
+                <div class="elementName">Polonium</div>
+                <div class="elementFullNum">[209]</div>
+            </div>
+        </div>
+        <div class="elementBox">
+            <div class="element brown">
+                <div class="elementNum">85</div>
+                <div class="elementAlphabet">At</div>
+                <div class="elementName">Astatine</div>
+                <div class="elementFullNum">[210]</div>
+            </div>
+        </div>
+        <div class="elementBox">
+            <div class="element lightPurple">
+                <div class="elementNum">86</div>
+                <div class="elementAlphabet">Rn</div>
+                <div class="elementName">Radon</div>
+                <div class="elementFullNum">222</div>
+            </div>
+        </div>
+    </div>
+    <div class="row">
+
+        <div class="elementBox">
+            <div class="element brown">
+                <div class="elementNum">87</div>
+                <div class="elementAlphabet">Fr</div>
+                <div class="elementName">Francium</div>
+                <div class="elementFullNum">[223]</div>
+            </div>
+        </div>
+        <div class="elementBox">
+            <div class="element yellow">
+                <div class="elementNum">88</div>
+                <div class="elementAlphabet">Ra</div>
+                <div class="elementName">Radium</div>
+                <div class="elementFullNum">226</div>
+            </div>
+        </div>
+        <div class="elementBox">
+            <div class="element green">
+                <div class="elementNum">89</div>
+                <div class="elementAlphabet">Ac</div>
+                <div class="elementName">Actinium</div>
+                <div class="elementFullNum">227</div>
+            </div>
+        </div>
+        <div class="elementBox">
+            <div class="element blue">
+                <div class="elementNum">104</div>
+                <div class="elementAlphabet">Rf</div>
+                <div class="elementName">Rutherfordium</div>
+                <div class="elementFullNum">[267]</div>
+            </div>
+        </div>
+        <div class="elementBox">
+            <div class="element blue">
+                <div class="elementNum">105</div>
+                <div class="elementAlphabet">Db</div>
+                <div class="elementName">Dubnium</div>
+                <div class="elementFullNum">[270]</div>
+            </div>
+        </div>
+        <div class="elementBox">
+            <div class="element blue">
+                <div class="elementNum">106</div>
+                <div class="elementAlphabet">Sg</div>
+                <div class="elementName">Seaborgium</div>
+                <div class="elementFullNum">[271]</div>
+            </div>
+        </div>
+        <div class="elementBox">
+            <div class="element blue">
+                <div class="elementNum">107</div>
+                <div class="elementAlphabet">Bh</div>
+                <div class="elementName">Bohrium</div>
+                <div class="elementFullNum">[270]</div>
+            </div>
+        </div>
+        <div class="elementBox">
+            <div class="element blue">
+                <div class="elementNum">108</div>
+                <div class="elementAlphabet">Hs</div>
+                <div class="elementName">Hassium</div>
+                <div class="elementFullNum">[277]</div>
+            </div>
+        </div>
+        <div class="elementBox">
+            <div class="element blue">
+                <div class="elementNum">109</div>
+                <div class="elementAlphabet">Mt</div>
+                <div class="elementName">Meitnerium</div>
+                <div class="elementFullNum">[278]</div>
+            </div>
+        </div>
+        <div class="elementBox">
+            <div class="element blue">
+                <div class="elementNum">110</div>
+                <div class="elementAlphabet">Ds</div>
+                <div class="elementName">Darmstadtium</div>
+                <div class="elementFullNum">[281]</div>
+            </div>
+        </div>
+        <div class="elementBox">
+            <div class="element blue">
+                <div class="elementNum">111</div>
+                <div class="elementAlphabet">Rg</div>
+                <div class="elementName">Roentgenium</div>
+                <div class="elementFullNum">[282]</div>
+            </div>
+        </div>
+        <div class="elementBox">
+            <div class="element blue">
+                <div class="elementNum">112</div>
+                <div class="elementAlphabet">Cn</div>
+                <div class="elementName">Copernicium</div>
+                <div class="elementFullNum">[285]</div>
+            </div>
+        </div>
+        <div class="elementBox">
+            <div class="element lightblue">
+                <div class="elementNum">113</div>
+                <div class="elementAlphabet">Nh</div>
+                <div class="elementName">Nihonium</div>
+                <div class="elementFullNum">[286]</div>
+            </div>
+        </div>
+        <div class="elementBox">
+            <div class="element lightblue">
+                <div class="elementNum">114</div>
+                <div class="elementAlphabet">Fl</div>
+                <div class="elementName">Flerovium</div>
+                <div class="elementFullNum">[289]</div>
+            </div>
+        </div>
+        <div class="elementBox">
+            <div class="element lightblue">
+                <div class="elementNum">115</div>
+                <div class="elementAlphabet">Mc</div>
+                <div class="elementName">Moscovium</div>
+                <div class="elementFullNum">[290]</div>
+            </div>
+        </div>
+        <div class="elementBox">
+            <div class="element lightblue">
+                <div class="elementNum">116</div>
+                <div class="elementAlphabet">Lv</div>
+                <div class="elementName">Livermorium</div>
+                <div class="elementFullNum">[293]</div>
+            </div>
+        </div>
+        <div class="elementBox">
+            <div class="element brown">
+                <div class="elementNum">117</div>
+                <div class="elementAlphabet">Ts</div>
+                <div class="elementName">Tennessine</div>
+                <div class="elementFullNum">[294]</div>
+            </div>
+        </div>
+        <div class="elementBox">
+            <div class="element lightPurple">
+                <div class="elementNum">118</div>
+                <div class="elementAlphabet">Og</div>
+                <div class="elementName">Oganesson</div>
+                <div class="elementFullNum">[294]</div>
+            </div>
+        </div>
+    </div>
+    <div class="row lastRowGap" >
+                <div class="elementBox">
+            <div class="elementEmpty">
+            </div>
+        </div>
+                <div class="elementBox">
+            <div class="elementEmpty">
+            </div>
+        </div>
+                <div class="elementBox">
+            <div class="elementEmpty">
+            </div>
+        </div>
+        <div class="elementBox">
+            <div class="element green">
+                <div class="elementNum">58</div>
+                <div class="elementAlphabet">Ce</div>
+                <div class="elementName">Cerium</div>
+                <div class="elementFullNum">140.12</div>
+            </div>
+        </div>
+        <div class="elementBox">
+            <div class="element green">
+                <div class="elementNum">59</div>
+                <div class="elementAlphabet">Pr</div>
+                <div class="elementName">Praseodymium</div>
+                <div class="elementFullNum">140.91</div>
+            </div>
+        </div>
+        <div class="elementBox">
+            <div class="element green">
+                <div class="elementNum">60</div>
+                <div class="elementAlphabet">Nd</div>
+                <div class="elementName">Neodymium</div>
+                <div class="elementFullNum">144.24</div>
+            </div>
+        </div>
+        <div class="elementBox">
+            <div class="element green">
+                <div class="elementNum">61</div>
+                <div class="elementAlphabet">Pm</div>
+                <div class="elementName">Promethium</div>
+                <div class="elementFullNum">[145]</div>
+            </div>
+        </div>
+        <div class="elementBox">
+            <div class="element green">
+                <div class="elementNum">62</div>
+                <div class="elementAlphabet">Sm</div>
+                <div class="elementName">Samarium</div>
+                <div class="elementFullNum">150.36</div>
+            </div>
+        </div>
+        <div class="elementBox">
+            <div class="element green">
+                <div class="elementNum">63</div>
+                <div class="elementAlphabet">Eu</div>
+                <div class="elementName">Europium</div>
+                <div class="elementFullNum">151.96</div>
+            </div>
+        </div>
+        <div class="elementBox">
+            <div class="element green">
+                <div class="elementNum">64</div>
+                <div class="elementAlphabet">Gd</div>
+                <div class="elementName">Gadolinium</div>
+                <div class="elementFullNum">157.25</div>
+            </div>
+        </div>
+        <div class="elementBox">
+            <div class="element green">
+                <div class="elementNum">65</div>
+                <div class="elementAlphabet">Tb</div>
+                <div class="elementName">Terbium</div>
+                <div class="elementFullNum">158.93</div>
+            </div>
+        </div>
+        <div class="elementBox">
+            <div class="element green">
+                <div class="elementNum">66</div>
+                <div class="elementAlphabet">Dy</div>
+                <div class="elementName">Dysprosium</div>
+                <div class="elementFullNum">162.50</div>
+            </div>
+        </div>
+        <div class="elementBox">
+            <div class="element green">
+                <div class="elementNum">67</div>
+                <div class="elementAlphabet">Ho</div>
+                <div class="elementName">Holmium</div>
+                <div class="elementFullNum">164.93</div>
+            </div>
+        </div>
+        <div class="elementBox">
+            <div class="element green">
+                <div class="elementNum">68</div>
+                <div class="elementAlphabet">Er</div>
+                <div class="elementName">Erbium</div>
+                <div class="elementFullNum">167.26</div>
+            </div>
+        </div>
+        <div class="elementBox">
+            <div class="element green">
+                <div class="elementNum">69</div>
+                <div class="elementAlphabet">Tm</div>
+                <div class="elementName">Thulium</div>
+                <div class="elementFullNum">168.93</div>
+            </div>
+        </div>
+        <div class="elementBox">
+            <div class="element green">
+                <div class="elementNum">70</div>
+                <div class="elementAlphabet">Yb</div>
+                <div class="elementName">Ytterbium</div>
+                <div class="elementFullNum">173.05</div>
+            </div>
+        </div>
+        <div class="elementBox">
+            <div class="element green">
+                <div class="elementNum">71</div>
+                <div class="elementAlphabet">Lu</div>
+                <div class="elementName">Lutetium</div>
+                <div class="elementFullNum">174.97</div>
+            </div>
+        </div>
+                <div class="elementBox">
+            <div class="elementEmpty">
+            </div>
+        </div>
+    </div>
+    <div class="row">
+        <div class="elementBox">
+            <div class="elementEmpty">
+            </div>
+        </div>
+                <div class="elementBox">
+            <div class="elementEmpty">
+            </div>
+        </div>
+                <div class="elementBox">
+            <div class="elementEmpty">
+            </div>
+        </div>
+        <div class="elementBox">
+            <div class="element green">
+                <div class="elementNum">90</div>
+                <div class="elementAlphabet">Th</div>
+                <div class="elementName">Thorium</div>
+                <div class="elementFullNum">232.04</div>
+            </div>
+        </div>
+        <div class="elementBox">
+            <div class="element green">
+                <div class="elementNum">91</div>
+                <div class="elementAlphabet">Pa</div>
+                <div class="elementName">Protactinium</div>
+                <div class="elementFullNum">231.04</div>
+            </div>
+        </div>
+        <div class="elementBox">
+            <div class="element green">
+                <div class="elementNum">92</div>
+                <div class="elementAlphabet">U</div>
+                <div class="elementName">Uranium</div>
+                <div class="elementFullNum">238.03</div>
+            </div>
+        </div>
+        <div class="elementBox">
+            <div class="element green">
+                <div class="elementNum">93</div>
+                <div class="elementAlphabet">Np</div>
+                <div class="elementName">Neptunium</div>
+                <div class="elementFullNum">[237]</div>
+            </div>
+        </div>
+        <div class="elementBox">
+            <div class="element green">
+                <div class="elementNum">94</div>
+                <div class="elementAlphabet">Pu</div>
+                <div class="elementName">Plutonium</div>
+                <div class="elementFullNum">[244]</div>
+            </div>
+        </div>
+        <div class="elementBox">
+            <div class="element green">
+                <div class="elementNum">95</div>
+                <div class="elementAlphabet">Am</div>
+                <div class="elementName">Americium</div>
+                <div class="elementFullNum">[243]</div>
+            </div>
+        </div>
+        <div class="elementBox">
+            <div class="element green">
+                <div class="elementNum">96</div>
+                <div class="elementAlphabet">Cm</div>
+                <div class="elementName">Curium</div>
+                <div class="elementFullNum">[247]</div>
+            </div>
+        </div>
+        <div class="elementBox">
+            <div class="element green">
+                <div class="elementNum">97</div>
+                <div class="elementAlphabet">Bk</div>
+                <div class="elementName">Berkelium</div>
+                <div class="elementFullNum">[247]</div>
+            </div>
+        </div>
+        <div class="elementBox">
+            <div class="element green">
+                <div class="elementNum">98</div>
+                <div class="elementAlphabet">Cf</div>
+                <div class="elementName">Californium</div>
+                <div class="elementFullNum">[251]</div>
+            </div>
+        </div>
+        <div class="elementBox">
+            <div class="element green">
+                <div class="elementNum">99</div>
+                <div class="elementAlphabet">Es</div>
+                <div class="elementName">Einsteinium</div>
+                <div class="elementFullNum">[252]</div>
+            </div>
+        </div>
+        <div class="elementBox">
+            <div class="element green">
+                <div class="elementNum">100</div>
+                <div class="elementAlphabet">Fm</div>
+                <div class="elementName">Fermium</div>
+                <div class="elementFullNum">[257]</div>
+            </div>
+        </div>
+        <div class="elementBox">
+            <div class="element green">
+                <div class="elementNum">101</div>
+                <div class="elementAlphabet">Md</div>
+                <div class="elementName">Mendelevium</div>
+                <div class="elementFullNum">[258]</div>
+            </div>
+        </div>
+        <div class="elementBox">
+            <div class="element green">
+                <div class="elementNum">102</div>
+                <div class="elementAlphabet">No</div>
+                <div class="elementName">Nobelium</div>
+                <div class="elementFullNum">[259]</div>
+            </div>
+        </div>
+        <div class="elementBox">
+            <div class="element green">
+                <div class="elementNum">103</div>
+                <div class="elementAlphabet">Lr</div>
+                <div class="elementName">Lawrencium</div>
+                <div class="elementFullNum">[262]</div>
+            </div>
+        </div>
+                <div class="elementBox">
+            <div class="elementEmpty">
+            </div>
+        </div>
+    </div>
 </body>
+
+
+
+
 </html>
