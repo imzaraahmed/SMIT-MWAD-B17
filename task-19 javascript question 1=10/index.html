@@ -5,21 +5,94 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Document</title>
+  <style>
+
+    h1 {
+     text-align: center; line-height: 10px; margin-top: 50px; color: rgb(255, 255, 255);
+    }
+    h2 { text-align: center; font-weight: 400; font-size: 20px; color: rgb(255, 255, 255); }
+
+    h3 {  font-weight: 400; }
+
+    .container {
+
+      width: 100%;
+        height: 100vh;
+        display: flex;
+        justify-content: center;
+        margin-top: 50px;
+
+    }
+    .col {
+
+      width: 50%;
+
+    }
+   
+    .col div{
+      display: flex;
+      justify-content: center;
+      align-items: center;
+
+     width:100%;
+     border: solid 1px #707070;
+     margin-bottom: 0px;
+     height: 100px;
+
+    }
+    h3{ width: 70%; font-weight: 400; margin-right: 20px;}
+
+    body {
+      background-color: rgb(63, 63, 63);
+      font-family: Arial, Helvetica, sans-serif;
+      color: bisque;
+      padding: 10px;
+    }
+
+    button {
+      border: 1px solid black;
+      border-radius: 10px;
+      background-color: rgb(186, 210, 217);
+      color: black;
+      padding: 10px 20px;
+      text-align: center;
+      text-decoration: none;
+      display: inline-block;
+      font-size: 16px;
+      margin: 4px 2px;
+      cursor: pointer;
+    }
+
+    button:hover {
+      background-color: rgb(240, 107, 107);
+      color: white;
+    }
+  </style>
 </head>
 
 <body>
 
   <script src="script.js"></script>
-  Question 1 Solution: <button onclick="q1()"> Run Solution </button><br>
-  Question 2 Solution: <button onclick="q2()"> Run Solution </button><br>
-  Question 3 Solution: <button onclick="q3()"> Run Solution </button><br>
-  Question 4 Solution: <button onclick="q4()"> Run Solution </button><br>
-  Question 5 Solution: <button onclick="q5()"> Run Solution </button><br>
-  Question 6 Solution: <button onclick="q6()"> Run Solution </button><br>
-  Question 7 Solution: <button onclick="q7()"> Run Solution </button><br>
-   Question 8 Solution: <button onclick="q8()"> Run Solution </button><br>
-   Question 9 Solution: <button onclick="q9()"> Run Solution </button><br>
-   Question 10 Solution: <button onclick="q10()"> Run Solution </button>
+  
+  <h1>Zara Ahmed - 414562</h1>
+  <h2>Task 19: JavaScript Questions</h2>
+  <div class="container">
+  <div class="col">
+    <div><h3>Question-1: Take two nos from user and display their sum: </h3><button onclick="q1()"> Run Solution </button></div>
+    <div><h3>Question 2: Write a program to add three numbers entered by the user </h3><button onclick="q2()"> Run Solution </button></div>
+    <div><h3>Question 3 Ask the user for two numbers, add them, and show the result using alert().:</h3> <button onclick="q3()"> Run Solution </button></div>
+    <div><h3>Question 4 Take two numbers and display their sum, difference, product, and quotient.:</h3> <button onclick="q4()"> Run Solution </button></div>
+    <div><h3>Question 5 Take the user’s name and two numbers, then greet the user with the message and result of addition.: </h3><button onclick="q5()"> Run Solution </button></div>
+    
+  </div>
+  <div class="col">  
+    <div><h3>Question 6  Take two numbers as input, convert them to integers, then add them and show the result in the console.:</h3> <button onclick="q6()"> Run Solution </button></div>
+    <div><h3>Question 7 Take two numbers as input using prompt(), check if both are numbers, then add them. If not, show an error message.:</h3> <button onclick="q7()"> Run Solution </button></div>
+    <div><h3>Question 8 Create a program where the user inputs a number and the program adds 10 to it and displays the result.: </h3><button onclick="q8()"> Run Solution </button></div>
+    <div><h3>Question 9 Take two numbers and display whether their sum is even or odd.: </h3><button onclick="q9()"> Run Solution </button></div>
+    <div><h3>Question 10 Create a simple calculator using prompt() that takes two numbers and an operator (+, -, , /), and performs the correct operation.: </h3><button onclick="q10()"> Run Solution </button></div>
+</div>
+</div>
 </body>
 
 </html>
