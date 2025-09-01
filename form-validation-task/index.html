@@ -2,40 +2,117 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Form Validation</title>
+  <script src="script.js"></script>
+  <style>
+    .validation-error-msg {
+      color: red;
+      display: none;
+      font-size: 14px;
+    }
+  </style>
 </head>
 
 <body>
-    <form>
-        
-        <form onsubmit="return validateForm();">
-            <label for="fname">First name:</label><br>
-            <input type="text" id="firstNameField"><br>
-            <div class="validation-error-mg" id="firstNameField-error">error</div>
-            <label for="lname">Last name:</label><br>
-            <input type="text" id="LastNameField"><br>
-            <div class="validation-error-mg" id="LastNameField-error">error</div>
-            <label for="email">Email:</label><br>
-            <input type="text" id="EmailField"><br>
-            <div class="validation-error-mg" id="EmailField-error">error</div>
-            <label for="password">password:</label><br>
-            <input type="text" id="passwordField"><br>
-            <div class="validation-error-mg" id="passwordField-error">error</div>
-            <label for="country">Country:</label><br>
-            <select id="countryField">
-                <option value=""> Select your country </option>
-                <option value="pakistan">Pakistan</option>
-                <option value="india">India</option>
-                <option value="usa">USA</option>
-                <option value="uk">UK</option>
-            </select><br>
-            <div class="validation-error-mg" id="DropdownField-error">error</div>
-            <input type="submit" value="Submit Form">
+  <form onsubmit="return validateForm()">
+    <label for="firstNameField">First name:</label><br>
+    <input type="text" id="firstNameField"><br>
+    <div class="validation-error-msg" id="firstNameFieldError">First name is required</div>
 
-        </form>
-        <script src="script.js"></script>
+    <label for="lastNameField">Last name:</label><br>
+    <input type="text" id="lastNameField"><br>
+    <div class="validation-error-msg" id="lastNameFieldError">Last name is required</div>
+
+    <label for="emailField">Email:</label><br>
+    <input type="text" id="emailField"><br>
+    <div class="validation-error-msg" id="emailFieldError">Valid email is required</div>
+
+    <label for="passwordField">Password:</label><br>
+    <input type="password" id="passwordField"><br>
+    <div class="validation-error-msg" id="passwordFieldError">Password must be at least 6 characters</div>
+
+    <label for="countryField">Country:</label><br>
+    <select id="countryField">
+      <option value="">Select your country</option>
+      <option value="pakistan">Pakistan</option>
+      <option value="india">India</option>
+      <option value="usa">USA</option>
+      <option value="uk">UK</option>
+    </select><br>
+    <div class="validation-error-msg" id="dropdownFieldError">Please select a country</div>
+
+    <br>
+    <input type="submit" value="Submit Form">
+  </form>
+
+  <script>
+    function validateForm() {
+      var isValid = true;
+
+      var firstNameField = document.getElementById("firstNameField");
+      var lastNameField = document.getElementById("lastNameField");
+      var emailField = document.getElementById("emailField");
+      var passwordField = document.getElementById("passwordField");
+      var countryField = document.getElementById("countryField");
+
+      var firstNameFieldError = document.getElementById("firstNameFieldError");
+      var lastNameFieldError = document.getElementById("lastNameFieldError");
+      var emailFieldError = document.getElementById("emailFieldError");
+      var passwordFieldError = document.getElementById("passwordFieldError");
+      var dropdownFieldError = document.getElementById("dropdownFieldError");
+
+      // Reset all errors
+      firstNameFieldError.style.display = "none";
+      lastNameFieldError.style.display = "none";
+      emailFieldError.style.display = "none";
+      passwordFieldError.style.display = "none";
+      dropdownFieldError.style.display = "none";
+
+      // First name validation
+      if (firstNameField.value === "") {
+        firstNameFieldError.style.display = "block";
+        isValid = false;
+      }
+
+      // Last name validation
+      if (lastNameField.value.trim() === "") {
+        lastNameFieldError.style.display = "block";
+        isValid = false;
+      }
+
+      // Email validation (basic)
+      //var emailPattern = /^[^ ]+@[^ ]+\.[a-z]{2,3}$/;
+      //if (!emailField.value.match(emailPattern)) {
+       // emailFieldError.style.display = "block";
+       // isValid = false;
+      //}
+
+        // Email validation (basic)
+      //var emailPattern = /^[^ ]+@[^ ]+\.[a-z]{2,3}$/;
+      if (!emailField.value.includes("@") || !emailField.value.includes(".")) {
+        emailFieldError.style.display = "block";
+        isValid = false;
+      }
+
+
+
+      // Password validation
+      if (passwordField.value.length < 6) {
+        passwordFieldError.style.display = "block";
+        isValid = false;
+      }
+
+      // Country validation
+      if (countryField.value === "") {
+        dropdownFieldError.style.display = "block";
+        isValid = false;
+      }
+
+      return isValid;
+    }
+  </script>
 </body>
 
 </html>
