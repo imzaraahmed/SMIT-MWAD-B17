@@ -73,13 +73,13 @@
       // First name validation
       if (firstNameField.value === "") {
         firstNameFieldError.style.display = "block";
-        isValid = false;
+        return false;
       }
 
       // Last name validation
-      if (lastNameField.value.trim() === "") {
+      if (lastNameField.value === "") {
         lastNameFieldError.style.display = "block";
-        isValid = false;
+        return false;
       }
 
       // Email validation (basic)
@@ -93,7 +93,7 @@
       //var emailPattern = /^[^ ]+@[^ ]+\.[a-z]{2,3}$/;
       if (!emailField.value.includes("@") || !emailField.value.includes(".")) {
         emailFieldError.style.display = "block";
-        isValid = false;
+        return false;
       }
 
 
@@ -101,16 +101,16 @@
       // Password validation
       if (passwordField.value.length < 6) {
         passwordFieldError.style.display = "block";
-        isValid = false;
+        return false;
       }
 
       // Country validation
       if (countryField.value === "") {
         dropdownFieldError.style.display = "block";
-        isValid = false;
+        return false;
       }
 
-      return isValid;
+      return true;
     }
   </script>
 </body>
