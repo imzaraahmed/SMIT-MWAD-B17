@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <form>
+        
+        <form onsubmit="return validateForm();">
+            <label for="fname">First name:</label><br>
+            <input type="text" id="firstNameField"><br>
+            <div class="validation-error-mg" id="firstNameField-error">error</div>
+            <label for="lname">Last name:</label><br>
+            <input type="text" id="LastNameField"><br>
+            <div class="validation-error-mg" id="LastNameField-error">error</div>
+            <label for="email">Email:</label><br>
+            <input type="text" id="EmailField"><br>
+            <div class="validation-error-mg" id="EmailField-error">error</div>
+            <label for="password">password:</label><br>
+            <input type="text" id="passwordField"><br>
+            <div class="validation-error-mg" id="passwordField-error">error</div>
+            <label for="country">Country:</label><br>
+            <select id="countryField">
+                <option value=""> Select your country </option>
+                <option value="pakistan">Pakistan</option>
+                <option value="india">India</option>
+                <option value="usa">USA</option>
+                <option value="uk">UK</option>
+            </select><br>
+            <div class="validation-error-mg" id="DropdownField-error">error</div>
+            <input type="submit" value="Submit Form">
+
+        </form>
+        <script src="script.js"></script>
+</body>
+
+</html>
