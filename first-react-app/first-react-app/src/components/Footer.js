@@ -6,7 +6,7 @@ const Footer = () => {
             color: "white",
             textAlign: "center",
             padding: "15px",
-            marginTop: "20px"
+            marginTop: "0px"
         }}>
             <p>© 2025 My React App. All rights reserved.</p>
 

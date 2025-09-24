@@ -2,14 +2,17 @@ import React from "react";
 import Header from "./components/Header";
 import Footer from "./components/Footer";
 import Hero from "./components/Hero";
-import Card from "./components/Card";
-function App() {
+import Academics from "./components/Academics";
+import Form from "./components/Form";
+function App( props) {
   return (
    <div>
     <Header />
     <Hero />
-    <Card />
+    <Academics title='ACADEMICS' />
+    <Form />
     <Footer />
+
    </div>
   );
 }
