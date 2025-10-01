@@ -30,18 +30,9 @@ function countVowels(str) {
 }
 alert(countVowels("elephant"));
 
-//3. Write a function `reverseString` that takes a string and returns it reversed (e.g., "hello" becomes "olleh").
 
-function reverseString(str) {
-    var reverse = "";
-    for (var i = str.length - 1; i >= 0; i--) {
-        reverse += str[i];
-    }
-    return reverse;
-}
-alert(reverseString("hello"));
 
-//4. Create a function `findMax` that takes an array of numbers and returns the largest number.
+//3. Create a function `findMax` that takes an array of numbers and returns the largest number.
 
 function findMax(array){
     var largestNum = [0];
@@ -53,6 +44,19 @@ function findMax(array){
     return largestNum;
 }
 alert(findMax([3,4,6,8,9]));
+
+
+//4. Write a function `reverseString` that takes a string and returns it reversed .
+
+function reverseString(str) {
+    var reverse = "";
+    for (var i = str.length - 1; i >= 0; i--) {
+        reverse += str[i];
+    }
+    return reverse;
+}
+alert(reverseString("hello"));
+
 
 //5. Write a function `isPalindrome` that checks if a given string is a palindrome (reads the same backward as forward).
 
@@ -142,23 +146,35 @@ function stringLength(str){
 }
 alert(stringLength("zara"));
 
-//12. Create a function `toUpperCase` that takes a string and returns it in uppercase.
+
+//12. Write a function `capitalizeFirstLetter` that capitalizes the first letter of each word in a string.
+
+function capitalizeFirstLetter(str) {
+    let words = str.split(" ");   // split string into array of words
+    let result = "";
+
+    for (let i = 0; i < words.length; i++) {
+        let word = words[i];
+        if (word.length > 0) {  // check if word is not empty
+            word = word[0].toUpperCase() + word.slice(1);
+        }
+        result += word + " ";   // add space after each word
+    }
+
+    return result.trim();  // remove extra space at the end
+}
+
+alert(capitalizeFirstLetter("this is my assignment")); 
+
+
+
+//13. Create a function `toUpperCase` that takes a string and returns it in uppercase.
 
 function toUpperCase(str){
     return str.toUpperCase();
 }
 alert(toUpperCase("maryum"));
 
-//13. Write a function `capitalizeFirstLetter` that capitalizes the first letter of each word in a string.
-
-function capitalizeFirstLetter(str) {
-  if (str.length === 0) return "";
-  return str[0].toUpperCase() + str.substring(1);
-}
-
-// Example
-console.log(capitalizeFirstLetter("hello world from javascript"));
-// Output: "Hello world from javascript"
 
 //14. Create a function `mergeArrays` that takes two arrays and merges them into one.
 
@@ -166,9 +182,8 @@ function mergeArrays(arr1, arr2) {
   return [...arr1, ...arr2];
 }
 
-// Example
-console.log(mergeArrays([1, 2, 3], [4, 5, 6]));
-// Output: [1, 2, 3, 4, 5, 6]
+alert(mergeArrays([1, 2, 3], [4, 5, 6]));
+
 
 
 //15. Write a function `isPrime` that checks if a number is prime.
@@ -184,10 +199,9 @@ function isPrime(num) {
 
   return true;
 }
-
-console.log(isPrime(2));  
-console.log(isPrime(7));  
-console.log(isPrime(10));
+ 
+alert(isPrime(7));  
+alert(isPrime(10));
 
 //16. Create a function `countWords` that counts the number of words in a string.
 
@@ -196,7 +210,147 @@ function countWords(str) {
   return words.length;
 }
 
-// Example
-console.log(countWords("Hello world from JavaScript")); // 4
+alert(countWords("Hello world from JavaScript")); 
+
+//17. Write a function `arrayContains` that checks if an array contains a specific value.
+
+function arrayContains(arr, value) {
+    return arr.includes(value); //includes a builtin function it checks the value in arry.
+}
+
+alert(arrayContains([1, 2, 3, 4, 5], 3)); 
+alert(arrayContains([1, 2, 3, 4, 5], 7));  
+
+//18.  Create a function `uniqueElements` that returns an array of unique elements from a given array.
+
+function uniqueElements(arr) {
+    return [...new Set(arr)]; //set is a builtin functon which removes duplicates
+}
+
+alert(uniqueElements([1, 2, 2, 3, 4, 4, 5]));
+
+//19.Create a function `average` that calculates the average of an array of numbers.
+
+function average(arr) {
+    if (arr.length === 0) return 0;  
+    let sum = 0;
+
+    for (let i = 0; i < arr.length; i++) {
+        sum += arr[i];   
+    }
+
+    return sum / arr.length; 
+}
+
+alert(average([10, 20, 30, 40])); 
+             
+//20.. Write a function `removeSpaces` that removes all spaces from a string.
+
+function removeSpaces(str) {
+    let result = "";
+    for (let i = 0; i < str.length; i++) {
+        if (str[i] !== " ") {  
+            result += str[i];
+        }
+    }
+    return result;
+}
+
+alert(removeSpaces("java script"));  
+
+//21. Write a function `swap` that swaps the values of two variables.
+
+function swap(a, b) {
+    [a, b] = [b, a];  
+    return [a, b];
+}
+
+alert(swap(7,5)); 
+
+//22.  Create a function `combineStrings` that concatenates two strings with a space in between.
+
+function combineStrings(str1, str2) {
+    return `${str1} ${str2}`;
+}
+
+alert(combineStrings("Zara", "Ahmed")); 
+
+//23. Create a function `sumOfDigits` that returns the sum of the digits of a number.
+
+function sumOfDigits(num) {
+    let str = num.toString();   
+    let sum = 0;
+
+    for (let i = 0; i < str.length; i++) {
+        sum += parseInt(str[i]);  
+    }
+
+    return sum;
+}
+alert(sumOfDigits(1234));  
+
+//24.  Write a function `findIndex` that returns the index of a specific value in an array.
+
+function findIndex(arr, value) {
+    return arr.indexOf(value);
+}
+
+alert(findIndex([10, 20, 30, 40], 30)); // 2
+alert(findIndex([10, 20, 30, 40], 50)); // -1
+
+//25.Write a function `getAge` that calculates the age of a person based on their birth year.
+
+function getAge(birthYear) {
+    let currentYear = new Date().getFullYear(); 
+    return currentYear - birthYear;
+}
+
+alert(getAge(2002));  
+alert(getAge(1990));  
+
+//26. Write a function `countUppercase` that counts the number of uppercase letters in a string.
+
+function countUppercase(str) {
+    let count = 0;
+    for (let i = 0; i < str.length; i++) {
+        if (str[i] >= 'A' && str[i] <= 'Z') {
+            count++;
+        }
+    }
+    return count;
+}
+alert(countUppercase("Zara Ahmed"));   
+
+//27.Write a function `isAdult` that takes an age and returns true if the age is 18 or older, and false otherwise.
+
+function isAdult(age) {
+    return age >= 18;
+}
+
+alert(isAdult(20));  
+alert(isAdult(15)); 
+
+//28.Create a function `squareNumber` that takes a number and returns its square.
+
+function squareNumber(num) {
+    return Math.pow(num, 2);
+}
+alert(squareNumber(4));  
+alert(squareNumber(9));  
+
+//29.  Write a function `countChars` that counts the number of characters in a string.
+
+function countChars(str) {
+    return str.length;
+}
+alert(countChars("JavaScript"));  
+
+//30.Write a function `removeLastElement` that takes an array and returns a new array with the last element removed.
+
+function removeLastElement(arr) {
+    return arr.slice(0, -1);  
+}
+
+alert(removeLastElement([1, 2, 3, 4])); // [1, 2, 3]
 
 
