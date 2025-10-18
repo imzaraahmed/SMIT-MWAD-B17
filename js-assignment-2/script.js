@@ -295,8 +295,8 @@ function findIndex(arr, value) {
     return arr.indexOf(value);
 }
 
-alert(findIndex([10, 20, 30, 40], 30)); // 2
-alert(findIndex([10, 20, 30, 40], 50)); // -1
+alert(findIndex([10, 20, 30, 40], 30)); 
+
 
 //25.Write a function `getAge` that calculates the age of a person based on their birth year.
 
@@ -306,7 +306,7 @@ function getAge(birthYear) {
 }
 
 alert(getAge(2002));  
-alert(getAge(1990));  
+ 
 
 //26. Write a function `countUppercase` that counts the number of uppercase letters in a string.
 
@@ -351,6 +351,6 @@ function removeLastElement(arr) {
     return arr.slice(0, -1);  
 }
 
-alert(removeLastElement([1, 2, 3, 4])); // [1, 2, 3]
+alert(removeLastElement([1, 2, 3, 4])); 
 
 
