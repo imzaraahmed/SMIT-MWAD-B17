@@ -1,0 +1,42 @@
+body {
+    background-color: brown;
+    background-image: url(images/Hero-bg-img.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.nav {
+    display: flex;
+    padding-left: 20px;
+    padding-right: 20px;
+
+}
+
+.logo {
+    width: 30%;
+   
+}
+
+.nav-bar {
+    width: 70%;
+   
+    display: flex;
+    justify-content: right;
+}
+
+.nav-links {
+    display: flex;
+    list-style-type: none;
+    gap: 20px;
+}
+
+.nav-links li {
+    list-style-type: none;
+
+}
+
+.nav-links li a {
+    text-decoration: none;
+    color: white;
+
+}
