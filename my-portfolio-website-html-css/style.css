@@ -103,3 +103,96 @@ font-size: 52px;
     display: flex;
     gap:20px;
 }
+
+
+
+.about-section {
+
+    padding: 0 200px;
+}
+.about-section h3 {
+    font-size: 42px;
+    text-align: center;
+}
+
+.about-section p {
+   font-size: 28px;
+    text-align: center;
+}
+
+.infographic-section {
+    padding: 0 400px;
+    margin-bottom: 100px;
+
+}
+
+.infographic-heading {
+text-align: center;
+}
+
+.infographic-pod-container {
+    display: flex;
+    gap: 20px;
+   
+}
+
+.infographic-pods {
+    width: 25%;
+
+   
+}
+.infographic-pods h3 {
+  font-size: 42px;
+}
+
+.services-section {
+    padding: 0 200px;
+ 
+ margin-bottom: 100px;
+}
+
+.services-heading {
+text-align: center;
+margin-bottom: 50px;
+}
+
+.services-pod-container {
+    display: flex;
+    gap: 20px;
+ 
+}
+
+.services-pods {
+    width: 25%;
+
+    
+}
+.services-pods h3 {
+  font-size: 42px;
+}
+
+.skills-section {
+    padding: 0 400px;
+ 
+}
+
+.skills-heading {
+text-align: center;
+margin-bottom: 50px;
+}
+
+.skills-pod-container {
+    display: flex;
+    gap: 20px;
+    
+}
+
+.skills-pods {
+    width: 16.6%;
+
+    
+}
+
+
+
+
