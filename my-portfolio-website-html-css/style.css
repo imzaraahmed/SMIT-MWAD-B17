@@ -50,6 +50,42 @@ h1, h2, h3, h4, h5, h6 {
     color: white;
 
 }
+.logo-mobile{
+    background-color: rgb(255, 187, 0);
+}
+.nav-mobile{
+    display: flex;
+    background-color: aqua;
+    justify-content:space-between;
+}
+.nav-dropdown-mobile{
+    background-color: black;
+      padding-left: 0px;
+}
+.nav-links-mobile li{
+   background-color: black;
+   list-style-type: none;
+   margin-left: 0%;
+  
+   border-bottom: 3px solid rgb(239, 235, 235);
+   padding:20px;
+   text-align: left;
+}
+.nav-links-mobile li a{
+      text-decoration: none;
+     color:#FDBB1C;
+     text-transform:uppercase;
+     font-weight: 600;
+}
+.nav-links-mobile{
+    padding: 0px;
+}
+
+.nav-dropdown-mobile-header{
+    display:flex;
+    justify-content: space-between;
+    padding:15px;
+}
 .hero-section{
     width:100%;
     
